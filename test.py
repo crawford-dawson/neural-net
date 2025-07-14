@@ -12,9 +12,9 @@ def Perceptron(input1, input2, output):
     weighted_sum = (input1 * weights[0]) + (input2 * weights[1]) + (bias * weights[2])
     # activation function
     if weighted_sum > 0:
-        return 1
+        weighted_sum = 1
     else:
-        return 0
+        weighted_sum = 0
     # tutorial does this a little differently, but this is more intuitive (at least to me)
     error = output - weighted_sum
     # update weights
